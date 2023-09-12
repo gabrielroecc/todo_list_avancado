@@ -1,0 +1,197 @@
+@import url("https://fonts.cdnfonts.com/css/inter");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Inter;
+}
+body,
+html {
+	height: 100%;
+}
+body {
+	background: #eafff7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.todo_wrapper {
+	padding: 59px 41px;
+	border-radius: 22px;
+	background: #fff;
+	box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+	width: 100vw;
+	max-width: fit-content;
+}
+.todo_wrapper h1 {
+	color: #000;
+	text-align: center;
+	font-family: Inter;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.form_wrapper {
+	margin-top: 40px;
+}
+.p_add_task,
+.p_filter,
+.edit_taks,
+.p_search {
+	color: #000;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.form_control_add,
+.form_control_edit,
+.form_control_search,
+#todo_filter {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 8px;
+	margin-top: 10px;
+}
+.form_control_add input#todo_input,
+.form_control_edit input#edit_input,
+.form_control_search input#todo_search,
+select {
+	width: 100vw;
+	max-width: 383px;
+	height: 30px;
+	border: 1px solid #ededed;
+	outline: none !important;
+	padding: 0 18px;
+}
+input#todo_input::placeholder,
+input#edit_input::placeholder,
+input#todo_search::placeholder {
+	color: #ededed;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+button {
+	width: 33px;
+	height: 30px;
+	background-color: #36e3d9;
+	border: 0;
+	outline: none;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#edit_form {
+	margin-top: 40px;
+	display: none;
+}
+#edit_form.active {
+	margin-top: 40px;
+	display: block;
+}
+.form_control_search button,
+#cancel_edit_button {
+	background-color: #e33636;
+}
+.settings {
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 8px;
+}
+.form_control_search {
+	justify-content: start;
+}
+.form_control_search input#todo_search {
+	max-width: 200px;
+}
+#todo_filter {
+	width: 100vw;
+	max-width: 175px;
+	height: 30px;
+}
+#todo_list {
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+.todo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 11px;
+	border: 1px solid #36e3d9;
+	border-radius: 4px;
+	transition: 0.4s;
+	width: 100%;
+}
+.todo_buttons {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 8px;
+}
+.todo p {
+	color: #000;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	transition: 0.4s;
+	line-height: normal;
+}
+.todo_btn {
+	width: 33px;
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #36e3d9;
+	background-color: #fff;
+}
+.delete_task {
+	background-color: #e33636;
+	border: 0;
+}
+.todo.done {
+	border: none;
+	background-color: #28b4ab;
+	border-radius: 4px;
+	transition: 0.4s;
+}
+.todo.done .todo_btn {
+	border: none;
+}
+.todo.done p {
+	color: #fff;
+	font-family: Inter;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: normal;
+	transition: 0.4s;
+	text-decoration-line: line-through;
+}
+img {
+	pointer-events: none;
+}
+.todo.close {
+	transform: translateY(-100px);
+	opacity: 0;
+}
+#todo_form.hide {
+	display: none;
+}
+.settings.hide {
+	display: none;
+}

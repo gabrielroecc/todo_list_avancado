@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="todo_wrapper">
+			<h1>To-do List</h1>
+			<div class="form_wrapper">
+				<form id="todo_form">
+					<p class="p_add_task">Adicione a sua tarefa:</p>
+					<div class="form_control_add">
+						<input
+							type="text"
+							id="todo_input"
+							placeholder="O que você vai fazer?" />
+						<button type="submit">
+							<img src="./img/add.svg" alt="" />
+						</button>
+					</div>
+				</form>
+				<form id="edit_form">
+					<p class="edit_taks">Edite a sua tarefa</p>
+					<div class="form_control_edit">
+						<input
+							type="text"
+							id="edit_input"
+							placeholder="O que você vai fazer?" />
+						<button type="submit">
+							<img src="./img/add.svg" alt="" />
+						</button>
+						<button id="cancel_edit_button">
+							<img src="./img/cancel.svg" alt="" />
+						</button>
+					</div>
+				</form>
+				<div class="settings">
+					<div class="search">
+						<form id="search_form">
+							<p class="p_search">Pesquisar tarefa</p>
+							<div class="form_control_search">
+								<input type="text" id="todo_search" placeholder="Buscar..." />
+								<button class="erase_btn" type="submit">
+									<img src="./img/cancel.svg" alt="" />
+								</button>
+							</div>
+						</form>
+					</div>
+					<div id="filter">
+						<p class="p_filter">Filtrar</p>
+						<select name="" id="todo_filter">
+							<option value="" selected disabled>Selecione</option>
+							<option value="all">Todos</option>
+							<option value="done">Feitos</option>
+							<option value="todo">A fazer</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="todo_list">
+					<!-- <div class="todo">
+						<p>Estou fazendo alguma coisa...</p>
+						<div class="todo_buttons">
+							<button class="todo_btn finish_task">
+								<img src="./img/check.svg" alt="" />
+							</button>
+							<button class="todo_btn edit_task">
+								<img src="./img/edit.svg" alt="" />
+							</button>
+							<button class="todo_btn delete_task">
+								<img src="./img/cancel.svg" alt="" />
+							</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<script src="./script/index.js"></script>
+	</body>
+</html>
